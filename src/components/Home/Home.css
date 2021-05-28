@@ -74,5 +74,31 @@ span {
   padding-left: 32%;
   padding-top: 4%;
 }
-
-
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid white;
+  padding: 10px;
+}
+.center2{
+  margin: auto;
+  width: 50%;
+  border: 3px solid white;
+  padding: 10px;
+}
+.rw{
+  background-color:whitesmoke;
+}
+.ra{
+  background-color: whitesmoke;
+}
+.rounded {
+  border-radius:.25rem!important
+}
+.value{
+  color: #8b0000;
+}
+.Name{
+  font-size: xx-large;
+  font-weight: 800;
+}

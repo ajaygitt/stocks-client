@@ -21,7 +21,7 @@ useEffect(()=>{
   
   console.log("hai");
 
-  axios.get('https://stocksserver.herokuapp.com/stocks').then((response)=>{
+  axios.get('http://localhost:8000/stocks').then((response)=>{
 
   console.log("res",response.data);
 
@@ -102,12 +102,18 @@ const searchStock=(text)=>{
 
 {stockMatch&&stockMatch.map((item,index)=>(
 
-<div key={index} style={{marginLeft:'33%',marginTop:"5px"}}>
+
+
+
+
+
+
+ <div key={index} style={{marginLeft:'33%',marginTop:"5px"}}>
 <Card style={{width:'50%',height:'45%'}} title={`Name:${item.Name}`}  >
  
  <span onClick={(e)=>{submitSearch(item)}}> {item.Name}</span>
 </Card>
-</div>
+</div> 
 
 
 ))}
@@ -117,10 +123,56 @@ const searchStock=(text)=>{
 
 {stockItem!='' &&
        
-       <div>
-        NAME: <h3>{stockItem.Name} </h3> <br />
-        EPS <h3>{stockItem.EPS}</h3>
-         Debt:<h4>{stockItem.Debt}</h4>
+       <div className="center">
+
+
+<div class="container ra rounded">
+<span className="Name">{stockItem.Name}</span>
+	<div class="container rw rounded">
+
+        <div class="center-box">
+
+
+        <div class="table-responsive-sm">
+       
+        <table class="table table-striped">
+
+  <tbody>
+    <tr>
+      <th scope="row">Market Cap  <span className="value">₹{stockItem.MarketCap}</span>   </th>
+      <th>Divident Yield  <span className="value">{stockItem.DividendYield}%</span>  </th>
+      <th>Debit Equality <span className="value">{stockItem.DebttoEquity}%</span> </th>
+   
+    </tr>
+    <tr>
+      <th scope="row">Current Price <span className="value"> ₹{stockItem.CurrentMarketPrice}</span> </th>
+      <th>ROCE  <br /> <span className="value">{stockItem.ROCE}%</span> </th>
+      <th>Eps <br /> <span className="value"> ₹ {stockItem.EPS}</span> </th>
+    
+    </tr>
+    <tr>
+      <th scope="row">stock P/E <br /> <span className="value"> {stockItem.StockPE}%</span> </th>
+      <th>ROE <br /> <span className="value">{stockItem.ROEPreviousAnnum}%</span>   </th>
+      <th>Reserves <br /> <span className="value"> ₹{stockItem.Reserves}</span> </th>
+     
+    </tr>
+    <tr>
+      <th scope="row">Debit  <span className="value"> ₹{stockItem.Debt}</span></th>
+    <th></th>
+    <th></th>
+     <th></th>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+        </div>
+	</div>
+</div>
+
+    
        </div>
       }
 
