@@ -21,7 +21,7 @@ useEffect(()=>{
   
   console.log("hai");
 
-  axios.get('http://localhost:8000/stocks').then((response)=>{
+  axios.get('https://stocksserver.herokuapp.com/stocks').then((response)=>{
 
   console.log("res",response.data);
 
