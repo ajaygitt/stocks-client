@@ -3,7 +3,7 @@ import React, { Component, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import Home from './Home/Home';
 import Header from './Header/Header';
-
+import Signup from './Signup/Signup'
 function user() {
 
   
@@ -13,8 +13,9 @@ function user() {
     <div>
 
 <Router>
-<Route exact path='/'><Header/> <Home/>  </Route>
+<Route exact path='/'><Header/> <Signup/>  </Route>
 
+<Route exact path='/home'> <Header/>  <Home/>  </Route>
 
 
 </Router>

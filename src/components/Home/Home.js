@@ -85,10 +85,23 @@ const searchStock=(text)=>{
 
 <div> 
 
+
+<div className="box">
+
+
+
+
+
+
+</div>
+
+
+
 <Form.Group as={Row} className="searchBar"  controlId="formPlaintextPassword">
    
     <Col sm="7">
-      <Form.Control type="text" placeholder="Search" name="search" id="search"
+    {/* <i className="fa fa-search"></i> */}
+      <Form.Control className="fa fa-search" type="text" placeholder="Search" name="search" id="search"
       
       onChange={(e)=>searchStock(e.target.value)}
       onSubmit={submitSearch}

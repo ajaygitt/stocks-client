@@ -9,7 +9,7 @@ function App() {
 
 
 <Route path='/'>   <User/>  </Route>
-
+<Route path='/a'> </Route>
 </Router>
     </div>
   );
